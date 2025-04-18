@@ -12,9 +12,9 @@ namespace SAAU.Repositories
             _context = context;
         }
 
-        public Task<List<Aluno>> Tudo()
+        public async Task<List<Aluno>> Tudo()
         {
-            return _context.Alunos.ToListAsync();
+            return await _context.Alunos.ToListAsync();
         }
 
         public async Task Adicionar(Aluno aluno)
