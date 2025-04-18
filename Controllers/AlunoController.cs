@@ -20,7 +20,7 @@ namespace SAAU.Controllers
         {
             try
             {
-                var alunos = _alunoRepository.Tudo();
+                var alunos = await _alunoRepository.Tudo();
                 return Ok(alunos);
             }
             catch (Exception ex)
